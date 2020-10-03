@@ -4,6 +4,7 @@ package com.example.springmvc.controllers;
 import com.example.springmvc.models.User;
 import com.example.springmvc.repositories.UserRepository;
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import org.jboss.jandex.Index;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -107,11 +108,17 @@ public class UserController {
         repository.save(user);
         return REDIRECT + "/";
     }
+    @GetMapping("/first-page")
+    public String getFirstPage(Model model){
+        return First_Page;
+
+    }
 
 
     // Am creat o clasa statica cu constante acestuia(rute) deoarece sunt folosite in mai mult de un loc si numele fisierului se schimba
     //atunci e mai simplu si sa sigur sa updatez intr-un singur loc
     static class Routes {
+        static final String First_Page ="firstpage";
         static final String INDEX = "index";
         static final String ADD_USER = "add-user";
         static final String UPDATE_USER = "update_user";

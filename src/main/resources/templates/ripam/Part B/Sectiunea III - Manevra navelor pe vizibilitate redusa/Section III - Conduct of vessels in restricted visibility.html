@@ -1,0 +1,76 @@
+<!DOCTYPE html >
+<html lang="ro">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<button type="button" class="collapsible">Section III - Conduct of vessels in restricted visibility</button>
+<div class="content">
+
+
+
+<button type="button" class="collapsible">Regula 19 - Manevra navelor pe vizibilitate redusa</button>
+<div class="content">
+    <p>a)	Prezenta regula se aplica navelor care nu se vad una pe alta si care naviga inauntrul sau in apropierea zonelor de vizibilitate redusa.
+
+        b)	Orice nava trebuie sa navige cu o viteza de siguranta adaptata imprejurarilor existente si conditiilor de vizibilitate redusa. Navele cu propulsie mecanica trebuie sa aiba masinile gata pentru a manevra imediat.
+
+        c)	Orice nava, atunci cand se conformeaza regulilor din sectiunea 1 din prezenta parte, trebuie sa tina neaparat seama de imprejurarile existente si de conditiile de vizibilitate redusa.
+
+        d)	O nava care detecteaza numai cu radarul prezenta unei alte nave trebuie sa stabileasca daca exista posibilitatea unei situatii de foarte mare apropiere si/sau un pericol de coliziune. In acest caz, nava trebuie sa ia cu mult timp inainte masuri pentru evitarea acestei situatii; totusi daca aceste masuri constau dintr-o schimbare de drum, este necesar sa se evite, in masura posibilului, urmatoarele manevre:
+
+        i) 	o schimbare da drum catre babord in cazul unei nave care se afla inaintea traversului cu exceptia cazului cand aceasta nava este ajunsa din urma;
+
+        ii)	o schimbare de drum in directia unei nave care se afla la travers sau inapoia traversului.
+
+        e)	Cu exceptia cazului in care s-a stabilit ca nu exista pericol de coliziune, orice nava care aude dintr-o directie care poate fi inaintea traversului, semnalul de ceata al unei nave, sau care nu poate evita o situatie de foarte mare apropiere cu o nava aflata inaintea traversului, trebuie sa reduca viteza sa la minimum necesar mentinerii drumului. Daca e necesar, va trebui sa opreasca si in toate imprejurarile sa navige cu atentie extrema pana cand a trecut pericolul de coliziune. </p>
+</div>
+</div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
